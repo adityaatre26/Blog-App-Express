@@ -1,0 +1,46 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="container my-2">
+  <h1 class="text-center mb-3">Edit Blog</h1>
+  <div class="col-6 offset-3">
+    <form action="/blogs/<%= blog._id %>" method="post">
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Title"
+          name="blog[title]"
+          value="<%= blog.title %>"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <textarea
+          type="text"
+          class="form-control"
+          placeholder="Content"
+          name="blog[content]"
+          rows="7"
+          required
+        >
+<%= blog.content %></textarea
+        >
+      </div>
+      <div class="mb-3">
+        <textarea
+          type="text"
+          class="form-control"
+          placeholder="Description"
+          name="blog[description]"
+          required
+        >
+ <%= blog.description %> </textarea
+        >
+      </div>
+      <% if ( currentUser && blog.author.equals(currentUser._id)) {%>
+      <button class="btn btn-success offset-5">Edit</button>
+      <% } %>
+    </form>
+  </div>
+</div>

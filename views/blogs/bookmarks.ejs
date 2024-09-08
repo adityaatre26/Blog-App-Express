@@ -1,0 +1,21 @@
+<% layout('layouts/boilerplate') %>
+
+<h1 class="text-center mt-2">Bookmarked Blogs</h1>
+<hr />
+
+<div class="container">
+  <div class="row">
+    <% for(let blog of blogs) { %>
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title"><%= blog.title %></h5>
+          <p class="card-text"><%= blog.description %></p>
+
+          <a href="/blogs/<%= blog._id %>" class="btn btn-success">View Blog</a>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</div>
