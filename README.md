@@ -5,7 +5,7 @@ This blog app has been made using the following tools:
 - Passport for handling authentication
 - Mongoose for Database
 
-This Blog app allows you to key functionalities such as:
+This Blog app allows you to implement key functionalities such as:
 - Creating a Blog
 - Viewing a Blog
 - Editing a Blog
