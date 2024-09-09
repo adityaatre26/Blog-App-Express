@@ -50,41 +50,5 @@ router.delete("/:id", async (req, res) => {
   res.redirect("/blogs");
 });
 
-// router.post("/:id/bookmark", async (req, res) => {
-//   const { id } = req.params;
-
-//   try {
-//     const blog = await Blog.findById(id);
-//     const user = req.user;
-
-//     if (!user.bookmarkedBlogs.includes(blog._id)) {
-//       user.bookmarkedBlogs.push(blog._id);
-//       await user.save();
-
-//       blog.bookmarks.push(user._id);
-//       await blog.save();
-//     }
-
-//     res.redirect(`/blogs/${id}`);
-//   } catch (error) {
-//     console.error("Error bookmarking blog:", error);
-//     res.status(400).send("Invalid blog ID");
-//   }
-// });
-
-// // Show all bookmarked blogs
-// router.get("/bookmarks", async (req, res) => {
-//   if (!req.user) {
-//     return res.redirect("/login");
-//   }
-
-//   try {
-//     const user = await User.findById(req.user._id).populate("bookmarkedBlogs");
-//     res.render("blogs/bookmarks", { blogs: user.bookmarkedBlogs });
-//   } catch (error) {
-//     console.error("Error retrieving bookmarks:", error);
-//     res.status(400).send("Error retrieving bookmarks");
-//   }
-// });
 
 module.exports = router;
