@@ -5,6 +5,9 @@ This blog app has been made using the following tools:
 - Passport for handling authentication
 - Mongoose for Database
 
+**Bookmark Functionality Usage Sample** <br>
+https://www.youtube.com/watch?v=AckFwRukbgM&ab_channel=AdityaAtre
+
 This Blog app allows you to implement key functionalities such as:
 - Creating a Blog
 - Viewing a Blog
